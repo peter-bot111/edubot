@@ -1,0 +1,5 @@
+{
+  "name": "EduBot AI",
+  "description": "A smart educational assistant powered by Gemini. Features doubt solving, lesson summarization, exam generation, and study scheduling adapted for students Class 1-12.",
+  "requestFramePermissions": []
+}
