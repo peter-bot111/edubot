@@ -353,12 +353,12 @@ export const LEVEL_THEMES: Record<ClassLevelGroup, any> = {
   PRIMARY: {
     label: "Primary (1-5)",
     bg: "bg-yellow-50",
-    navGradient: "from-yellow-400 via-orange-400 to-red-400",
-    heroGradient: "from-yellow-300 via-orange-300 to-pink-300",
-    cardStyle: "rounded-[2.5rem] border-2 border-orange-100",
-    buttonGradient: "bg-gradient-to-r from-orange-400 to-pink-500 hover:from-orange-500 hover:to-pink-600",
+    navGradient: "from-amber-400 via-orange-500 to-rose-500",
+    heroGradient: "from-amber-300 via-orange-400 to-pink-500",
+    cardStyle: "rounded-[3rem] border-4 border-white shadow-[0_10px_40px_-12px_rgba(251,146,60,0.4)]",
+    buttonGradient: "bg-gradient-to-r from-amber-400 to-rose-500 hover:from-amber-500 hover:to-rose-600 shadow-lg shadow-orange-200",
     welcome: "Hi Friend! Ready to play and learn? 🌟",
-    studySession: "30 min study + 10 min break",
+    studySession: "20 min study + 10 min play",
     overrides: {
       [ToolId.AI_TUTOR]: { name: "My Buddy", icon: "🤖", description: "Talk to your smart robot friend!" },
       [ToolId.STUDY_SCHEDULER]: { name: "My Time Table", icon: "⏰", description: "Plan your day with fun activities!" },
