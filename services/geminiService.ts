@@ -1,9 +1,6 @@
 import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
 import { Message, StudentProfile } from "../types";
 
-// Initialize the client.
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-
 // Helper to generate personalized system instructions
 const getPersonalizedSystemInstruction = (
   baseRole: string, 
@@ -67,6 +64,9 @@ export const generateEducationResponse = async (
   modelName: string = 'gemini-3-flash-preview'
 ): Promise<string> => {
   try {
+    // Initialize the client here to ensure we use the current environment and avoid top-level crashes
+    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+
     const systemInstruction = getPersonalizedSystemInstruction(
       "You are EduBot, a helpful, encouraging, and safe AI tutor for students K-12.",
       profile,
@@ -96,6 +96,9 @@ export const generateChatResponse = async (
   language: string = 'English'
 ): Promise<string> => {
   try {
+    // Initialize the client here
+    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+
     const systemInstruction = getPersonalizedSystemInstruction(
       `You are EduBot, a personalized AI Tutor for ${profile.name}. Be conversational and Socratic.`,
       profile,
